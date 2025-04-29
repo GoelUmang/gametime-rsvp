@@ -1,27 +1,56 @@
-# GametimeRsvp
+# Gametime﻿ Hero — Team RSVP Manager 🗒️
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.16.
+A **stand-alone Angular 17** module that lets community managers quickly track who’s in, out, or maybe for an event.  
+Styled to match the look & feel of [gametimehero.com](https://www.gametimehero.com) — same header, bright green CTAs, chat bubble, and subtle grid background.
 
-## Development server
+## ✨ Features
+|  ✔ | Description |
+|----|-------------|
+| **Angular 17 Signals** | Reactive state with zero RxJS subscriptions |
+| **SOLID RsvpService** | Pure helpers, typed `Player` & `RsvpStatus` interfaces |
+| **Gametime Hero UI**  | Header, CTA buttons, chat FAB, hero grid background |
+| **Unit tests**        | Jasmine spec for service add / update logic |
+| **One-click deploy**  | `ng deploy` → GitHub Pages |
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Quick Start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+# prerequisites
+node --version   # v20 LTS
+npm i -g @angular/cli@17
 
-## Build
+# clone & run
+git clone https://github.com/<goelumang>/gametime-rsvp.git
+cd gametime-rsvp
+npm install
+npm start      # http://localhost:4200
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+##Project Structure
+src/
+ ├─ app/
+ │   ├─ models/
+ │   │   ├─ player.model.ts
+ │   │   └─ rsvp-status.model.ts
+ │   ├─ services/
+ │   │   └─ rsvp.service.ts
+ │   ├─ pages/
+ │   │   └─ rsvp-manager.component.*
+ │   └─ shared/
+ │       └─ chat-widget.component.*
+ ├─ assets/
+ │   └─ gametime_hero.webp
+ └─ styles.scss        # global theme + hero grid background
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+📜 Tech Stack
+Angular 17 (stand-alone APIs)
 
-## Running end-to-end tests
+TypeScript 5
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Dart Sass
 
-## Further help
+GitHub Pages for static hosting
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
