@@ -1,0 +1,45 @@
+<!-- Centered container -->
+<main class="rsvp-shell">
+
+    <!-- Card -->
+    <section class="card">
+      <h1>Team RSVP Manager</h1>
+  
+      <!-- add / update form -->
+      <form (ngSubmit)="submit()" class="form">
+        <input
+          placeholder="Player name"
+          [ngModel]="name()"
+          (ngModelChange)="name.set($event)"
+          name="name"
+          required />
+  
+        <select
+          [ngModel]="status()"
+          (ngModelChange)="status.set($event)"
+          name="status">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Maybe">Maybe</option>
+        </select>
+  
+        <button type="submit" class="btn">Save</button>
+      </form>
+  
+      <!-- quick stats -->
+      <div class="stats">
+        ✔ {{ rsvp.totals().yes }}
+        ✖ {{ rsvp.totals().no }}
+        ❔ {{ rsvp.totals().maybe }}
+      </div>
+  
+      <!-- roster -->
+      <ul>
+        <li *ngFor="let p of rsvp.players()">
+          {{ p.displayName }} — <strong>{{ p.status }}</strong>
+        </li>
+      </ul>
+    </section>
+  
+  </main>
+  

@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+/* ---------------- Gametime Hero Global Theme ---------------- */
+@use 'sass:color';
+
+:root{
+  --gh-bg        : #ffffff;         /* site background */
+  --gh-grid-line : #f2f5f9;         /* faint lines */
+  --gh-grid-dot  : #ffffff;         /* bump dots on intersections */
+  --gh-card      : #ffffff;
+  --gh-card-shadow: 0 12px 24px rgba(0,0,0,.08);
+  --gh-green     : #00c853;
+  --gh-orange    : #ff7a00;
+  --gh-radius    : 12px;
+}
+
+*{box-sizing:border-box;margin:0}
+
+html,body{
+  height:100%;background:var(--gh-bg);color:#0d1119;
+  font-family:'Poppins',sans-serif;
+}
+
+/* ----- subtle grid background (GT-Hero hero section) ----- */
+$cell   : 120px;
+$line   : #e9edf3;
+$dotClr : #ffffff;
+
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-1;
+
+  /* 3-layer composite */
+  background:
+    radial-gradient(circle at 1px 1px, $dotClr 0 2px, transparent 2px) 0 0 / #{$cell} #{$cell},
+    linear-gradient($line 1px, transparent 1px)                       0 0 / #{$cell} #{$cell},
+    linear-gradient(90deg, $line 1px, transparent 1px)                0 0 / #{$cell} #{$cell};
+
+  opacity:.55;
+  pointer-events:none;
+}
+
+
+/* utility buttons (green & outline) */
+.btn{background:var(--gh-green);color:#fff;padding:.55rem 1.4rem;
+     border:none;border-radius:999px;font-weight:600;cursor:pointer;
+     box-shadow:0 4px 12px rgba(0,200,83,.35);transition:filter .15s;}
+.btn:hover{filter:brightness(1.05)}
+.btn.outline{background:#fff;color:#0d1119;border:2px solid var(--gh-grid-line);
+             box-shadow:none;}
+.btn.outline:hover{background:var(--gh-grid-line)}

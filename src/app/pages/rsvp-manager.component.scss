@@ -1,0 +1,51 @@
+/* -------- layout wrapper: centers card on wide screens -------- */
+.rsvp-shell{
+    display:flex;justify-content:center;align-items:flex-start;
+    padding:5rem 1rem;
+  }
+  
+  /* -------- RSVP Card -------- */
+  .card{
+    width:100%;max-width:540px;
+    padding:2.2rem 2.4rem;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 12px 24px rgba(0,0,0,.08);
+    position:relative;
+  }
+  
+  /* pink–orange accent bar */
+  .card::before{
+    content:'';position:absolute;top:0;left:0;bottom:0;width:5px;
+    background:linear-gradient(180deg,#ff007a 0%,#ff7a00 100%);
+    border-radius:5px 0 0 5px;
+  }
+  
+  /* heading */
+  h1{margin:0 0 1.8rem;font-size:1.9rem;font-weight:700;color:#0d1119}
+  
+  /* form row */
+  .form{
+    display:flex;gap:.7rem;margin-bottom:1.3rem;flex-wrap:wrap;
+  }
+  
+  /* inputs */
+  input,select{
+    flex:1 1 160px;
+    padding:.65rem .9rem;
+    border:2px solid #e6eaf1;
+    border-radius:12px;
+    font-size:.98rem;
+  }
+  
+  /* button inherits .btn from global styles */
+  button{flex:0 0 auto}
+  
+  /* stats */
+  .stats{font-weight:600;font-size:.97rem;margin-bottom:1rem;display:flex;gap:1.1rem}
+  
+  /* roster list */
+  ul{list-style:none;margin:0;padding:0}
+  li{padding:.45rem 0;border-bottom:1px solid #e6eaf1}
+  li:last-child{border-bottom:none}
+  

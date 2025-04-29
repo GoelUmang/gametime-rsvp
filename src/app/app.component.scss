@@ -1,0 +1,60 @@
+/* =====  Gametime Hero Header  ====================================== */
+$nav-h    : 72px;
+$green    : #00c853;   // GT-hero button green
+$green-glow: rgba(0,200,83,.35);
+$gray     : #f1f3f7;   // subtle outline & hover bg
+$logo-blue: #00263d;
+$border   : #e6eaf1;   // bottom hairline
+
+.gh-nav{
+  height:$nav-h;
+  background:#fff;
+  border-bottom:1px solid $border;
+  box-shadow:0 1px 3px rgba(0,0,0,.05);
+  position:sticky;top:0;z-index:20;
+  font-family:'Poppins',sans-serif;
+}
+
+.gh-wrap{
+  max-width:1240px;margin:0 auto;height:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2.2rem;
+}
+
+/* ---------- logo */
+.gh-logo{
+    display:flex;align-items:center;
+    img{
+      height:34px;           /* matches navbar height */
+      width:auto;            /* keep aspect ratio */
+    }
+  }
+
+/* ---------- links */
+.gh-links{display:flex;gap:2.8rem;font-weight:600;font-size:.95rem}
+.gh-links a{text-decoration:none;color:#000;white-space:nowrap;transition:color .15s}
+.gh-links a:hover{color:$green}
+.gh-links a.active{color:$green}  
+        /* make “current page” green */
+        
+
+/* ---------- actions */
+.gh-actions{display:flex;gap:1.2rem}
+
+/* tiny, rounded login pill */
+.gh-btn{
+  font-weight:600;font-size:.9rem;border-radius:36px;
+  padding:.55rem 1.6rem;cursor:pointer;border:none;
+  transition:all .15s ease;
+  &.outline{
+    color:#000;border:2px solid $gray;background:#fff;
+  }
+  &.outline:hover{background:$gray;color:#000}
+  &.cta{
+    color:#fff;background:$green;box-shadow:0 0 10px $green-glow;
+  }
+  &.cta:hover{filter:brightness(1.05)}
+}
+
+/* ---------- push main content below sticky bar */
+router-outlet{display:block;padding-top:2rem}

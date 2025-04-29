@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ChatWidgetComponent } from './shared/chat-widget.component'
 
 @Component({
-  selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [
+    RouterOutlet,              
+    ChatWidgetComponent        
+  ]
 })
 export class AppComponent {
   title = 'gametime-rsvp';
