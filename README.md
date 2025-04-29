@@ -26,7 +26,7 @@ node --version   # v20 LTS
 npm i -g @angular/cli@17
 
 # clone & run
-git clone https://github.com/<goelumang>/gametime-rsvp.git
+git clone https://github.com/goelumang/gametime-rsvp.git
 cd gametime-rsvp
 npm install
 npm start      # http://localhost:4200
