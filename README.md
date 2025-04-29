@@ -16,7 +16,7 @@ Styled to match the look & feel of [gametimehero.com](https://www.gametimehero.c
 ## Live Preview
 
 <p align="center">
-  <img src="assets/Gametime_Hero_rsvp.png" width="720" alt="RSVP Manager demo">
+  <img src="src/assets/Gametime_Hero_rsvp.png" width="720" alt="RSVP Manager demo">
 </p>
 ## 🚀 Quick Start
 
