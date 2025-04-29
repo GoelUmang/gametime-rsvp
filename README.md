@@ -11,9 +11,13 @@ Styled to match the look & feel of [gametimehero.com](https://www.gametimehero.c
 | **Gametime Hero UI**  | Header, CTA buttons, chat FAB, hero grid background |
 | **Unit tests**        | Jasmine spec for service add / update logic |
 | **One-click deploy**  | `ng deploy` → GitHub Pages |
-
 ---
 
+## Live Preview
+
+<p align="center">
+  <img src="assets/Gametime_Hero_rsvp.png" width="720" alt="RSVP Manager demo">
+</p>
 ## 🚀 Quick Start
 
 ```bash
